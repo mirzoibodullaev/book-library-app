@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from "react-redux";
-import "./Filter.css";
 import {
     resetFilters,
     selectAuthorFilter,
@@ -9,8 +8,9 @@ import {
     setOnlyFavoriteFilter,
     setTitleFilter,
 } from "../../redux/slices/filterSlice";
+import "./Filter.css";
 
-const Filter = () => {
+export const Filter = () => {
     const titleFilter = useSelector(selectTitleFilter);
     const authorFilter = useSelector(selectAuthorFilter);
     const onlyFavoriteFilter = useSelector(selectOnlyFavoriteFilter);
@@ -68,5 +68,3 @@ const Filter = () => {
         </div>
     );
 };
-
-export default Filter;

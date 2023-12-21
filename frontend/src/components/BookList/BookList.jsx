@@ -6,12 +6,12 @@ import {
 } from "../../redux/slices/booksSlice";
 
 import { BsBookmarkStar, BsBookmarkStarFill } from "react-icons/bs";
-import "./BookList.css";
 import {
     selectAuthorFilter,
     selectTitleFilter,
     selectOnlyFavoriteFilter,
 } from "../../redux/slices/filterSlice";
+import "./BookList.css";
 
 export const BookList = () => {
     const books = useSelector(selectBooks);
@@ -72,7 +72,8 @@ export const BookList = () => {
                                 by{" "}
                                 <strong>
                                     {highlightMatch(book.author, authorFilter)}
-                                </strong>
+                                </strong>{" "}
+                                ({book.source})
                             </div>
                             <div className="book-actions">
                                 <span
