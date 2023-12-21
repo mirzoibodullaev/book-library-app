@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
+import { FaSpinner } from "react-icons/fa";
 import "react-toastify/dist/ReactToastify.css";
 import {
     addBook,
@@ -11,7 +12,6 @@ import { createBookWithID } from "../../utils/createBookWithID";
 import booksData from "../../data/books.json";
 import "./BookForm.css";
 import { setError } from "../../redux/slices/errorSlice";
-import { FaSpinner } from "react-icons/fa";
 
 export const BookForm = () => {
     const [title, setTitle] = useState("");
