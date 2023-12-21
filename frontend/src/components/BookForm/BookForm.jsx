@@ -54,8 +54,6 @@ export const BookForm = () => {
     };
     const handleAddRandomBookViaAPI = () => {
         dispatch(fetchBook("http://localhost:4000/random-book-delayed"));
-        toast.success("Book added successfully");
-        return <ToastContainer position="top-right" autoClose={2000} />;
     };
 
     return (
